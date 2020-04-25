@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private List<Game> games;
     private GamesAdapter gamesAdapter;
+    public RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         initialData();
 
-        RecyclerView recyclerView =(RecyclerView)findViewById(R.id.Recycler_View);
+        recyclerView =(RecyclerView)findViewById(R.id.Recycler_View);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         gamesAdapter = new GamesAdapter(games, this);
@@ -79,10 +81,16 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-
     }
 
+    public void launchGameActivity(View view){
+        Intent intent=new Intent(this, Game_Activity.class);
 
+        startActivity(intent);
+    }
 
-
+    public void launchShareListActivity(View view){
+        Intent intent=new Intent(this, SharePage_Activity.class);
+        startActivity(intent);
+    }
 }

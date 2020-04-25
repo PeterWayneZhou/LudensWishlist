@@ -8,6 +8,7 @@
     tools:context=".Game_Activity">
 
     <ImageView
+        android:id="@+id/gameImage"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:scaleType="fitStart"
@@ -18,8 +19,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:text="Title"
-        android:textSize="50sp" />
+
+        android:textSize="27sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -33,6 +34,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:text="PS4"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/gameGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:textSize="20sp" />
     </LinearLayout>
 
