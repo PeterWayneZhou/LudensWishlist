@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#000000"
     tools:context=".Game_Activity">
 
     <ImageView
@@ -18,14 +19,25 @@
         android:id="@+id/gameTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
         android:layout_marginLeft="16dp"
 
         android:textSize="27sp" />
+
+    <Button
+        android:id="@+id/addWishlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:backgroundTint="#FFC107"
+        android:text="Add to Wishlist"
+        />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16sp"
+
         android:orientation="horizontal">
 
         <TextView
@@ -33,6 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:textColor="#ffffffff"
             android:text="PS4"
             android:textSize="20sp" />
 
@@ -40,6 +53,7 @@
             android:id="@+id/gameGenre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#ffffffff"
             android:layout_marginLeft="16dp"
             android:textSize="20sp" />
     </LinearLayout>
@@ -49,6 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
+        android:textColor="#ffffffff"
         android:text="03.01.2020"
         android:textSize="20sp" />
 
@@ -62,17 +77,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:textColor="#ffffffff"
             android:layout_marginTop="16sp"
             android:text="Introduction:"
             android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/addWishlist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="50sp"
-            android:text="Add to Wishlist" />
 
     </RelativeLayout>
 
@@ -83,7 +92,8 @@
         android:layout_marginHorizontal="16sp"
         android:layout_marginTop="16sp"
         android:justificationMode="inter_word"
-        android:text="DARKSIDERS: GENESIS is an action/adventure game "
+        android:textColor="#ffffffff"
+        android:text=""
         android:textSize="20sp" />
 
 

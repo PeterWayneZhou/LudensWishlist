@@ -7,7 +7,7 @@
     tools:context=".SharePage_Activity">
 
     <ImageView
-        android:id="@+id/splash_imageview"
+        android:id="@+id/game_image_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_centerInParent="true"
@@ -16,6 +16,7 @@
         android:src="@drawable/animalcrossing1" />
 
     <TextView
+        android:id="@+id/game_name_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -28,6 +29,7 @@
         android:textColor="#ffffffff" />
 
     <TextView
+        android:id="@+id/game_genre_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -39,6 +41,7 @@
         android:text="Game Genre: "
         android:textColor="#ffffffff" />
     <TextView
+        android:id="@+id/game_releaseDate_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -47,7 +50,7 @@
         android:layout_marginBottom="90dp"
         android:background="#000000"
         android:padding="12dip"
-        android:text="Game Platform: "
+        android:text="Release Date: "
         android:textColor="#ffffffff" />
 
     <TextView

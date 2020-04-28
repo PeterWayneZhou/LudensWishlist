@@ -60,7 +60,8 @@ public class GamesAdapter extends Adapter<GameViewHolder> implements Serializabl
         final String console=game.platform;
         final String type=game.genre;
         final String when=game.releaseDate;
-        final String creator=game.studio;
+        final String studio=game.studio;
+        final String platform=game.platform;
         final int image=game.gameId2;
         final String gameBio=game.bio;
         holder.detailButton.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +71,8 @@ public class GamesAdapter extends Adapter<GameViewHolder> implements Serializabl
                 intent.putExtra("KEY_NAME", gameTitle);
                 intent.putExtra("KEY_CONSOLE", console);
                 intent.putExtra("KEY_GENRE", type);
+                intent.putExtra("KEY_PLATFORM", platform);
+                intent.putExtra("KEY_STUDIO", studio);
                 intent.putExtra("KEY_DATE", when);
                 intent.putExtra("KEY_PIC", image);
                 intent.putExtra("KEY_BIO", gameBio);
@@ -81,6 +84,12 @@ public class GamesAdapter extends Adapter<GameViewHolder> implements Serializabl
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent (context, SharePage_Activity.class);
+                intent.putExtra("KEY_NAME", gameTitle);
+               //intent.putExtra("KEY_CONSOLE", console);
+                intent.putExtra("KEY_GENRE", type);
+                intent.putExtra("KEY_DATE", when);
+                intent.putExtra("KEY_PIC", image);
+                //intent.putExtra("KEY_BIO", gameBio);
                 context.startActivity(intent);
             }
         });
