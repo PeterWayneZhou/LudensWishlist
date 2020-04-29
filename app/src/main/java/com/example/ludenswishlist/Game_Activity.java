@@ -74,29 +74,29 @@ public class Game_Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent (Game_Activity.this, WishList_Activity.class);
-//                intent.putExtra("KEY_NAME_W", game_Title);
-//                intent.putExtra("KEY_PLATFORM_W", game_platform);
-//                intent.putExtra("KEY_GENRE_W", game_genre);
-//                intent.putExtra("KEY_DATE_W", game_releaseDate);
-//                intent.putExtra("KEY_PIC_W", image);
-//                intent.putExtra("KEY_STUDIO_W", game_studio);
-//                intent.putExtra("KEY_BIO_W",game_bio);
+                intent.putExtra("KEY_NAME_W", game_Title);
+                intent.putExtra("KEY_PLATFORM_W", game_platform);
+                intent.putExtra("KEY_GENRE_W", game_genre);
+                intent.putExtra("KEY_DATE_W", game_releaseDate);
+                intent.putExtra("KEY_PIC_W", image);
+                intent.putExtra("KEY_STUDIO_W", game_studio);
+                intent.putExtra("KEY_BIO_W",game_bio);
 
-                Game g = new Game(title, genre, platform,studio,date,bio,pic);
-                database.getReference("999").push().setValue("123")
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                System.out.println(e);
-                            }
-                        })
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                System.out.println(task);
-                            }
-                        });
-                System.out.println(AddToWishList.getKey());
+//                Game g = new Game(title, genre, platform,studio,date,bio,pic);
+//                database.getReference("999").push().setValue("123")
+//                        .addOnFailureListener(new OnFailureListener() {
+//                            @Override
+//                            public void onFailure(@NonNull Exception e) {
+//                                System.out.println(e);
+//                            }
+//                        })
+//                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<Void> task) {
+//                                System.out.println(task);
+//                            }
+//                        });
+//                System.out.println(AddToWishList.getKey());
 //                AddToWishList.addListenerForSingleValueEvent(new ValueEventListener() {
 //                    @Override
 //                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

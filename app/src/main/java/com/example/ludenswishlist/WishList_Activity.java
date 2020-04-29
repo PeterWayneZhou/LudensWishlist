@@ -53,31 +53,32 @@ public class WishList_Activity extends AppCompatActivity {
     private void initialData() {
         games = new ArrayList<>();
         Intent receivedIntent=getIntent();
-//        final String title=receivedIntent.getStringExtra("KEY_NAME_W");
-//        String platform = receivedIntent.getStringExtra("KEY_PLATFORM_W");
-//        String studio = receivedIntent.getStringExtra("KEY_STUDIO_W");
-//        String genre=receivedIntent.getStringExtra("KEY_GENRE_W");
-//        String date=receivedIntent.getStringExtra("KEY_DATE_W");
-//        String bio=receivedIntent.getStringExtra("KEY_BIO_W");
-//        int pic=receivedIntent.getIntExtra("KEY_PIC_W",0);
-        AddToWishList = database.getReference("AddtoWishList");
-        AddToWishList.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                //Game loadedData = dataSnapshot.getValue(Game.class);
-               // valueField.setText(loadedData);
-               // Log.e("Count " ,""+dataSnapshot.getChildrenCount());
-                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
-                    Game post = postSnapshot.getValue(Game.class);
-                    //Log.e("Get Data", post.<YourMethod>());
-                    games.add(new Game(post.getGameName(), post.getGenre(), post.getPlatform(), post.getStudio(), post.getReleaseDate(), post.getBio(), post.getGameId()));
-                }
-            }
-            @Override
-            public void onCancelled(DatabaseError error) {
-                Toast.makeText(WishList_Activity.this, "Error loading Firebase", Toast.LENGTH_SHORT).show();
-            }
-        });
+        final String title=receivedIntent.getStringExtra("KEY_NAME_W");
+        String platform = receivedIntent.getStringExtra("KEY_PLATFORM_W");
+        String studio = receivedIntent.getStringExtra("KEY_STUDIO_W");
+        String genre=receivedIntent.getStringExtra("KEY_GENRE_W");
+        String date=receivedIntent.getStringExtra("KEY_DATE_W");
+        String bio=receivedIntent.getStringExtra("KEY_BIO_W");
+        int pic=receivedIntent.getIntExtra("KEY_PIC_W",0);
+        games.add(new Game(title, genre, platform, studio, date, bio, pic));
+//        AddToWishList = database.getReference("AddtoWishList");
+//        AddToWishList.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                //Game loadedData = dataSnapshot.getValue(Game.class);
+//               // valueField.setText(loadedData);
+//               // Log.e("Count " ,""+dataSnapshot.getChildrenCount());
+//                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+//                    Game post = postSnapshot.getValue(Game.class);
+//                    //Log.e("Get Data", post.<YourMethod>());
+//                    games.add(new Game(post.getGameName(), post.getGenre(), post.getPlatform(), post.getStudio(), post.getReleaseDate(), post.getBio(), post.getGameId()));
+//                }
+//            }
+//            @Override
+//            public void onCancelled(DatabaseError error) {
+//                Toast.makeText(WishList_Activity.this, "Error loading Firebase", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
 
